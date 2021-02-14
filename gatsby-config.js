@@ -17,8 +17,8 @@ module.exports = {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: process.env.API_URL 
-        ? "https://bagimsiz-akademi.herokuapp.com", 
-        // : "http://localhost:1337",
+        ? "https://bagimsiz-akademi.herokuapp.com" 
+        : "http://localhost:1337",
         contentTypes: ["article", "category", "writer"],
         singleTypes: [`homepage`, `global`],
         queryLimit: 1000,
