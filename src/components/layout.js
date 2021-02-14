@@ -1,55 +1,23 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
+import Header from '../components/header'
+import '../styles/layout.css'
+import Footer from '../components/footer'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+export default function Layout({ children, breadcrumbs }) {
+    return (
+        <div>
+            <Helmet>
+                <title>
+                    Bagimsiz Akademi
+            {breadcrumbs ? ` - ${breadcrumbs.join(" - ")}` : ``}
+                </title>
+                <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+            </Helmet>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+        </div>
+    )
 }
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout

@@ -1,42 +1,40 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from "react";
+import { Link } from 'gatsby'
+import '../styles/layout.css'
+import '../styles/framework.css'
+import Menu from './menu'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = () => {
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  return (
+    <body id="top">
+      <div className="wrapper row0">
+        <div id="topbar" className="hoc clear">
+          <div className="fl_right" style={{ paddingRight: '1em' }}>
+            <ul>
+              <li><Link to="#"><i className="fa fa-lg fa-home" style={{ paddingRight: '1em' }}></i></Link></li>
+              <li><Link to="#">Turkce</Link></li>
+              <li><Link to="#">English</Link></li>
+              <li><Link to="#">Kurdî</Link></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="wrapper row1">
+        <header id="header" className="hoc clear">
+          <div id="logo" className="fl_left">
+            <h1><Link to="/">BAĞIMSIZ AKADEMİ</Link></h1>
+            <p>Sed imperdiet lectus</p>
+          </div>
+        </header>
+      </div>
+      <div className="wrapper row2">
+        <div id="mainav" className="hoc clear">
+          <Menu />
+        </div>
+      </div>
+    </body>
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header   

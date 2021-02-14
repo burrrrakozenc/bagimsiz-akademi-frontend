@@ -1,0 +1,10 @@
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .nav-element {
+    margin-right: 0.8em;
+    color: black;
+} */

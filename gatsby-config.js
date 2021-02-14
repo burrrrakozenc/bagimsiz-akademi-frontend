@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `BAGIMSIZ AKADEMI`,
+    description: `Bagimsiz akademi paylasim platformu.`,
+    author: `@burrakozenc`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,6 +13,19 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-source-strapi",
+      options: {
+        apiURL: process.env.API_URL 
+        ? "https://bagimsiz-akademi.herokuapp.com" 
+        : "http://localhost:1337",
+        contentTypes: ["article", "category", "writer"],
+        singleTypes: [`homepage`, `global`],
+        queryLimit: 1000,
+      },
+    },
+    `gatsby-plugin-sass`,
+    'gatsby-plugin-styled-components',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -27,8 +40,14 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-responsive-iframe`],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
