@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `BAGIMSIZ AKADEMI`,
-    description: `Bagimsiz akademi paylasim platformu.`,
+    description: `Bagimsiz akademi paylasim platformu...`,
     author: `@burrakozenc`,
   },
   plugins: [
