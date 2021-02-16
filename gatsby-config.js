@@ -24,8 +24,8 @@ module.exports = {
         queryLimit: 1000,
       },
       loginData: {
-        identifier: 'test',
-        password: '123456',
+        identifier: 'brk.ozenc@gmail.com',
+        password: '!Bokvar3',
       },
     },
     `gatsby-plugin-sass`,
