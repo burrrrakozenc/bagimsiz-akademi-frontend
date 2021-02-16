@@ -22,10 +22,10 @@ module.exports = {
         contentTypes: ["article", "category", "writer"],
         singleTypes: [`homepage`, `global`],
         queryLimit: 1000,
-        loginData: {
-          identifier: 'brk.ozenc@gmail.com',
-          password: '!Bokvar3',
-        },
+        // loginData: {
+        //   identifier: 'brk.ozenc@gmail.com',
+        //   password: '!Bokvar3',
+        // },
       },
     },
     `gatsby-plugin-sass`,
