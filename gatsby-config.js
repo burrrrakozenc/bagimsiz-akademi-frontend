@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `BAGIMSIZ AKADEMI`,
-    description: `Bagimsiz akademiiiii`,
+    description: `Bagimsiz akademi`,
     author: `@burrakozenc`,
   },
   plugins: [
