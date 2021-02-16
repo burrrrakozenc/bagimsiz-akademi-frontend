@@ -23,8 +23,8 @@ module.exports = {
         singleTypes: [`homepage`, `global`],
         queryLimit: 1000,
         loginData: {
-          identifier: "",
-          password: "",
+          identifier: "brk.ozenc@gmail.com",
+          password: "!Bokvar3",
         },
       },
     },
