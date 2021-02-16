@@ -45,7 +45,7 @@ class IndexPage extends React.Component {
                       {Gallery.map((articleGallery) => {
                         return (<Link to={`../${articleGallery.slug}`}>
                           <Image key={articleGallery.id}
-                            fluid={articleGallery.image.childImageSharp.fluid}
+                            fluid={articleGallery.image.localFile.childImageSharp.fluid}
                             alt={articleGallery.title}
                             style={{
                               height: '38vh'
@@ -145,20 +145,25 @@ IndexPage.propTypes = propTypes
 
 export default IndexPage
 
+// , limit: 10
+
 export const query = graphql`
 query {
-  gallery: allStrapiArticle(sort: {order: DESC, fields: publishedAt}, limit: 10) {
+  gallery: allStrapiArticle(sort: {order: DESC, fields: publishedAt}) {
     nodes {
       title
       slug
       publishedAt
       image {
+        localFile{
         childImageSharp {
           fluid {
             src
           }
         }
         id
+      }
+      id
       }
       author {
         name
@@ -169,18 +174,21 @@ query {
     }
   }
 
-  navList: allStrapiArticle(sort: {order: DESC, fields: publishedAt}, limit: 6) {
+  navList: allStrapiArticle(sort: {order: DESC, fields: publishedAt}) {
     nodes {
       title
       slug
       publishedAt
       image {
+        localFile{
         childImageSharp {
           fluid {
             src
           }
         }
         id
+      }
+      id
       }
       author {
         name

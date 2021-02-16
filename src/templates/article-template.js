@@ -39,7 +39,14 @@ Article.propTypes = {
 }
 
 export default Article
-
+// image {
+//     childImageSharp {
+//       fluid {
+//         src
+//       }
+//     }
+//     id
+//   }
 export const pageQuery = graphql`
     query ArticleQuery($slug: String!){
         strapiArticle(slug: {eq: $slug}) {
@@ -52,14 +59,7 @@ export const pageQuery = graphql`
               id
             }
             id
-            image {
-                childImageSharp {
-                  fluid {
-                    src
-                  }
-                }
-                id
-              }
+
       }
     }
   `

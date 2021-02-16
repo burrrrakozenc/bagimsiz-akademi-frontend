@@ -8,7 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
         resolve(
             graphql(`
         {
-            article: allStrapiArticle( limit: 100) {
+            article: allStrapiArticle {
                 edges {
                   node {
                     slug

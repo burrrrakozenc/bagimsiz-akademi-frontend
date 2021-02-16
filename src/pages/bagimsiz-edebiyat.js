@@ -16,7 +16,7 @@ const Bagimsiz = ({ data }) => {
                             <Link to={`../${bag.slug}`}>
                                 <div className="card-wrapper">
                                     <div className="blog-card">
-                                        <img className="blog-img" alt="img" src={bag.image.childImageSharp.fluid.src} />
+                                        <img className="blog-img" alt="img" src={bag.image.localFile.childImageSharp.fluid.src} />
                                         <div className="text-overlay">
                                             <h2>{bag.title}</h2>
                                             <p>{bag.description}
@@ -39,7 +39,7 @@ export default Bagimsiz
 
 export const pageQuery = graphql`
     {
-        bagimsiz: allStrapiArticle(filter: {category: {name: {eq: "bagimsiz edebiyat"}}}) {
+        bagimsiz: allStrapiArticle{
             nodes {
               title
               author {
@@ -52,13 +52,18 @@ export const pageQuery = graphql`
               slug
             publishedAt
             image {
-                childImageSharp {
-                fluid {
-                    src
-                }
+                localFile {
+                  childImageSharp {
+                    fluid {
+                      src
+                    }
+                    id
+                  }
+                  id
                 }
                 id
-            }
+              }
+              id
             }
           }
     }

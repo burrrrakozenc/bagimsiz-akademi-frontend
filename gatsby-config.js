@@ -23,6 +23,10 @@ module.exports = {
         singleTypes: [`homepage`, `global`],
         queryLimit: 1000,
       },
+      loginData: {
+        identifier: 'test',
+        password: '123456',
+      },
     },
     `gatsby-plugin-sass`,
     'gatsby-plugin-styled-components',
