@@ -17,7 +17,7 @@ export default function Layout({ children, breadcrumbs }) {
             </Helmet>
             <Header />
             <main>{children}</main>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
