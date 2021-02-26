@@ -1,14 +1,14 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar, Nav } from 'react-bootstrap'
-import { LinkContainer } from "react-router-bootstrap"
+// import { LinkContainer } from "react-router-bootstrap"
 import '../styles/menu.css'
 
 const Menu = () => {
     return (
         <div>
             <div className="nav-wrapper">
-                <Navbar collapseOnSelect expand="lg">
+                <Navbar collapseOnSelect expand="md">
                     <Navbar.Brand style={{ fontFamily: "Josefin Sans" }}></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse style={{ color: 'black' }} id="responsive-navbar-nav">

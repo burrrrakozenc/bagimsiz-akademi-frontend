@@ -11,9 +11,9 @@ class Article extends Component {
             author,
             title,
             content,
-            // slug,
+            slug,
             description,
-            // image,
+            image,
             publishedAt
         } = this.props.data.strapiArticle
 
@@ -21,11 +21,15 @@ class Article extends Component {
             <Layout>
                 <div className="article-container">
                     <div className="article-header">
-                        <h2>{title}</h2>
-                        <h4>{description}</h4>
-                        <h5>Yazar: <Link to={`/${author.name}`}>{author.name}</Link></h5>
-                        <p>Yayimlanma Tarihi: {publishedAt}</p>
-                        <hr />
+                        <div>
+                            {/* style={{ display: 'flex', justifyContent: 'center', alignItems:'center' }}   */}
+                            <img style={{paddingBottom:'1rem'}} src={image.localFile.childImageSharp.fluid.src} alt={slug} />
+                            <h2>{title}</h2>
+                            <h4>{description}</h4>
+                            <h5>Yazar: <Link to={`/${author.name}`}>{author.name}</Link></h5>
+                            <p>Yayimlanma Tarihi: {publishedAt}</p>
+                            <hr />
+                        </div>
                     </div>
                     <div className="article-text-container">
                         <ReactMarkdown
@@ -66,6 +70,15 @@ export const pageQuery = graphql`
             }
             id
             publishedAt(formatString: "YYYY/MM/DD mm.ss")
+            image {
+                localFile {
+                  childImageSharp {
+                    fluid {
+                      src
+                    }
+                  }
+                }
+              }
       }
     }
   `

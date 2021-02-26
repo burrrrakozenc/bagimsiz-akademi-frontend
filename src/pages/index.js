@@ -6,7 +6,7 @@ import * as PropTypes from 'prop-types'
 import '../styles/layout.css'
 import "../styles/framework.css"
 import { Carousel } from 'react-responsive-carousel'
-import Footer from '../components/footer'
+// import Footer from '../components/footer'
 
 // import '../styles/indexCarousel.css'
 
@@ -134,7 +134,7 @@ class IndexPage extends React.Component {
               </div> */}
             {/* </footer> */}
           {/* </div> */}
-        <Footer/>
+        {/* <Footer/> */}
       </Layout>
     )
   }

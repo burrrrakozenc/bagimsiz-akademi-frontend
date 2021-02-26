@@ -73,7 +73,7 @@
 
 @media (max-width: 648px) {
     /*Mobile View */
-    .header {
+    /* .header {
         padding: 0px 10px;
     }
     .logo {
@@ -129,7 +129,7 @@
 
 .mobile-menu {
     display: block;
-} */
+} */ */
 
 /* * {
     box-sizing: border-box;
