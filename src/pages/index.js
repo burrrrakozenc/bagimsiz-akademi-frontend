@@ -6,6 +6,7 @@ import * as PropTypes from 'prop-types'
 import '../styles/layout.css'
 import "../styles/framework.css"
 import { Carousel } from 'react-responsive-carousel'
+import Footer from '../components/footer'
 
 // import '../styles/indexCarousel.css'
 
@@ -27,8 +28,6 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-
-        <>
           <div className="wrapper row2-after">
             <div className="bgded">
               <div id="pageintro" className="hoc clear">
@@ -100,22 +99,7 @@ class IndexPage extends React.Component {
               })}
             </div>
           </div>
-          <div className="center">
-            <footer id="footer" className="hoc clear">
-              {/* <div className="one_third first" style={{margin: '0 auto'}}> */}
-                {/* <h6 className="heading">Id porttitor enim elit</h6> */}
-                {/* <ul className="nospace btmspace-30 linklist contact">
-                  <li><i className="fa fa-phone"></i> +00 (123) 456 7890</li>
-                  <li><i className="fa fa-envelope-o"></i> info@domain.com</li>
-                </ul> */}
-                <ul className="faico clear">
-                  <li><Link className="faicon-facebook" href="#"><i className="fa fa-facebook"></i></Link></li>
-                  <li><Link className="faicon-twitter" href="#"><i className="fa fa-twitter"></i></Link></li>
-                  <li><Link className="faicon-dribble" href="#"><i className="fa fa-dribbble"></i></Link></li>
-                  <li><Link className="faicon-linkedin" href="#"><i className="fa fa-linkedin"></i></Link></li>
-                  <li><Link className="faicon-google-plus" href="#"><i className="fa fa-google-plus"></i></Link></li>
-                  <li><Link className="faicon-vk" href="#"><i className="fa fa-vk"></i></Link></li>
-                </ul>
+          {/* <div className="center"> */}
               {/* </div> */}
               {/* <div className="one_third">
                 <h6 className="heading">Elit eros congue nunc</h6>
@@ -148,9 +132,9 @@ class IndexPage extends React.Component {
                   </fieldset>
                 </form>
               </div> */}
-            </footer>
-          </div>
-        </>
+            {/* </footer> */}
+          {/* </div> */}
+        <Footer/>
       </Layout>
     )
   }
