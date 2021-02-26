@@ -23,6 +23,7 @@ class IndexPage extends React.Component {
   render() {
     const Gallery = this.props.data.gallery.nodes
     const NavList = this.props.data.navList.nodes
+    const IndexArticles = this.props.data.indexArticles.nodes
 
     return (
       <Layout>
@@ -34,13 +35,13 @@ class IndexPage extends React.Component {
                 <div className="intro-wrapper">
                   <div className="pageintro-left">
                     {/* <div className=""> */}
-                    <Carousel showThumbs={false} 
-                    showStatus={false} 
-                    useKeyboardArrows 
-                    className="presentation-mode"
-                    infiniteLoop={true}
-                    autoPlay={true}
-                    dynamicHeight={false}
+                    <Carousel showThumbs={false}
+                      showStatus={false}
+                      useKeyboardArrows
+                      className="presentation-mode"
+                      infiniteLoop={true}
+                      autoPlay={true}
+                      dynamicHeight={false}
                     >
                       {Gallery.map((articleGallery) => {
                         return (<Link to={`../${articleGallery.slug}`}>
@@ -58,7 +59,7 @@ class IndexPage extends React.Component {
                     </Carousel>
                     {/* </div> */}
                   </div>
-                  <div className="pageintro-right" 
+                  <div className="pageintro-right"
                   // style={{
                   //   marginTop:'3rem',
                   // }}
@@ -78,21 +79,35 @@ class IndexPage extends React.Component {
               </div>
             </div>
           </div>
-          {/* <hr style={{ height: '3px' }} /> */}
-
-          <div className="wrapper row4">
+          <div className="articles-wrapper" style={{paddingBottom:'5rem'}}>
+            <div className="articles-container">
+              {IndexArticles.map((article) => {
+                return (
+                  <Link key={article.id} to={`../${article.slug}`}>
+                    <div className="card-wrapper">
+                      <div className="blog-card">
+                        <img className="blog-img" alt="img" src={article.image.localFile.childImageSharp.fluid.src} />
+                        <div className="text-overlay">
+                          <h2>{article.title}</h2>
+                          <p>{article.description}
+                          </p>
+                        </div>
+                      </div>
+                      {/* <div className="credit">Yazar<a className="creator-link" href="https://brettstevenson.io">{article.author.name}</a></div> */}
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+          <div className="center">
             <footer id="footer" className="hoc clear">
-              <div className="one_third first">
-                <h6 className="heading">Id porttitor enim elit</h6>
-                <ul className="nospace btmspace-30 linklist contact">
-                  <li><i className="fa fa-map-marker"></i>
-                    <address>
-                      Street Name &amp; Number, Town, Postcode/Zip
-          </address>
-                  </li>
+              {/* <div className="one_third first" style={{margin: '0 auto'}}> */}
+                {/* <h6 className="heading">Id porttitor enim elit</h6> */}
+                {/* <ul className="nospace btmspace-30 linklist contact">
                   <li><i className="fa fa-phone"></i> +00 (123) 456 7890</li>
                   <li><i className="fa fa-envelope-o"></i> info@domain.com</li>
-                </ul>
+                </ul> */}
                 <ul className="faico clear">
                   <li><Link className="faicon-facebook" href="#"><i className="fa fa-facebook"></i></Link></li>
                   <li><Link className="faicon-twitter" href="#"><i className="fa fa-twitter"></i></Link></li>
@@ -101,8 +116,8 @@ class IndexPage extends React.Component {
                   <li><Link className="faicon-google-plus" href="#"><i className="fa fa-google-plus"></i></Link></li>
                   <li><Link className="faicon-vk" href="#"><i className="fa fa-vk"></i></Link></li>
                 </ul>
-              </div>
-              <div className="one_third">
+              {/* </div> */}
+              {/* <div className="one_third">
                 <h6 className="heading">Elit eros congue nunc</h6>
                 <ul className="nospace linklist">
                   <li>
@@ -132,7 +147,7 @@ class IndexPage extends React.Component {
                     <button type="submit" value="submit">Submit</button>
                   </fieldset>
                 </form>
-              </div>
+              </div> */}
             </footer>
           </div>
         </>
@@ -149,53 +164,74 @@ export default IndexPage
 
 export const query = graphql`
 query {
-  gallery: allStrapiArticle(sort: {order: DESC, fields: publishedAt}) {
-    nodes {
-      title
-      slug
-      publishedAt
-      image {
-        localFile{
-        childImageSharp {
-          fluid {
-            src
+              gallery: allStrapiArticle(sort: {order: DESC, fields: publishedAt}) {
+              nodes {
+              title
+              slug
+              publishedAt
+              image {
+                      localFile{
+                      childImageSharp {
+                      fluid {
+                      src
+                    }
+                }
+                id
+              }
+              id
+              }
+              author {
+                      name
+                id
+              }
+              id
+              description
+            }
           }
-        }
-        id
-      }
-      id
-      }
-      author {
-        name
-        id
-      }
-      id
-      description
-    }
-  }
 
   navList: allStrapiArticle(sort: {order: DESC, fields: publishedAt}) {
-    nodes {
-      title
-      slug
-      publishedAt
-      image {
-        localFile{
-        childImageSharp {
-          fluid {
-            src
+              nodes {
+              title
+              slug
+              publishedAt
+              image {
+                      localFile{
+                      childImageSharp {
+                      fluid {
+                      src
+                    }
+                }
+                id
+              }
+              id
+              }
+              author {
+                      name
+                id
+              }
+              id
+              description
+            }
           }
-        }
-        id
-      }
-      id
-      }
+  indexArticles: allStrapiArticle(limit: 3) {
+    nodes {
       author {
         name
         id
       }
-      id
       description
+      id
+      slug
+      title
+      image {
+        localFile {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
+      }
     }
   }
 }

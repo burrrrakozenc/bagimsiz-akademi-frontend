@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: rgb(211, 211, 211) !important; */
 }
 
-/* .nav-element {
-    margin-right: 0.8em;
+.nav-element {
+    /* margin-right: 0.8em; */
     color: black;
-} */
+}

@@ -6,34 +6,34 @@ import '../styles/articles.scss'
 
 const Article = ({ data }) => {
 
-    const { articles: { nodes: article },
-    } = data
-    return (
-        <Layout>
-            <div className="articles-wrapper">
-                <div className="articles-container">
-                    {article.map((articl) => {
-                        return (
-                            <Link to={`../${articl.slug}`}>
-                                <div className="card-wrapper">
-                                    <div className="blog-card">
+  const { articles: { nodes: article },
+  } = data
+  return (
+    <Layout>
+      <div className="articles-wrapper">
+        <div className="articles-container">
+          {article.map((articl) => {
+            return (
+              <Link to={`../${articl.slug}`}>
+                <div className="card-wrapper">
+                  <div className="blog-card">
 
-                                        <img className="blog-img" alt="img" src={articl.image.localFile.childImageSharp.fluid.src} />
-                                        <div className="text-overlay">
-                                            <h2>{articl.title}</h2>
-                                            <p>{articl.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="credit">Created by <a className="creator-link" href="https://brettstevenson.io">Brett Stevenson</a></div>
-                                </div>
-                            </Link>
-                        )
-                    })}
+                    <img className="blog-img" alt="img" src={articl.image.localFile.childImageSharp.fluid.src} />
+                    <div className="text-overlay">
+                      <h2>{articl.title}</h2>
+                      <p>{articl.description}
+                      </p>
+                    </div>
+                  </div>
+                  {/* <div className="credit">Created by <a className="creator-link" href="https://brettstevenson.io">{articl.author.name}</a></div> */}
                 </div>
-            </div>
-        </Layout>
-    )
+              </Link>
+            )
+          })}
+        </div>
+      </div>
+    </Layout>
+  )
 
 }
 

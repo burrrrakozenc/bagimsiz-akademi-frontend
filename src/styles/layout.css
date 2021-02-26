@@ -337,7 +337,7 @@ blockquote::before{color:rgba(0,0,0,.05);}
 .row2{color:#363636; background-color:#F6F6F6; border-color:#000000;}
 .row2-after{color:#363636; background-color:#FFFFFF;}
 .row3{color:#363636; background-color:#FFFFFF;}
-.row4{color:#363636; background-color:#FFFFFF; border-color:#F0F0F0;}
+.row4{color:#363636; background-color:#FFFFFF; border-color:#F0F0F0; margin: 0 auto;}
 .row5, .row5 a{color:#363636; background-color:#FFFFFF;}
 .row5{border-color:#F0F0F0;}
 
