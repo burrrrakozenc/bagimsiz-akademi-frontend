@@ -8,7 +8,7 @@ const Menu = () => {
     return (
         <div>
             <div className="nav-wrapper">
-                <Navbar collapseOnSelect expand="lg" bg="white">
+                <Navbar collapseOnSelect expand="lg">
                     <Navbar.Brand style={{ fontFamily: "Josefin Sans" }}></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse style={{ color: 'black' }} id="responsive-navbar-nav">
