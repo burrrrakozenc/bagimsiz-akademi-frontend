@@ -50,6 +50,19 @@ module.exports = {
         plugins: [`gatsby-remark-responsive-iframe`],
       },
     },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // Directory with the strings JSON
+        path: `${__dirname}/src/intl`,
+        // Supported languages
+        languages: [`tr`, `en`],
+        // Default site language
+        defaultLanguage: `tr`,
+        // Redirects to `/pt` in the route `/`
+        redirect: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,10 +1,11 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar, Nav } from 'react-bootstrap'
-// import { LinkContainer } from "react-router-bootstrap"
+// import { Link } from 'gatsby'
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 import '../styles/menu.css'
 
-const Menu = () => {
+const Menu = ({intl}) => {
     return (
         <div>
             <div className="nav-wrapper">
@@ -13,15 +14,15 @@ const Menu = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse style={{ color: 'black' }} id="responsive-navbar-nav">
                         <Nav className="mr-auto" style={{ fontSize: '16px', fontFamily: "Josefin Sans" }}>
-                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/">Anasayfa</Nav.Link>
-                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/kitap">Kitap</Nav.Link>
-                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/makale" >Makale</Nav.Link>
-                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/sinema">Sinema</Nav.Link>
-                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/zizek">Zizek Calismalari</Nav.Link>
-                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/bagimsiz-edebiyat">Bagimsiz Edebiyat</Nav.Link>
-                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/politika">Politika</Nav.Link>
-                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/video">Video</Nav.Link>
-                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/podcast">Podcast</Nav.Link>
+                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/"><FormattedMessage id="home"/></Nav.Link>
+                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/kitap"><FormattedMessage id="book"/></Nav.Link>
+                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/makale" ><FormattedMessage id="article"/></Nav.Link>
+                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/sinema"><FormattedMessage id="cinema"/></Nav.Link>
+                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/zizek"><FormattedMessage id="zizek"/></Nav.Link>
+                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/bagimsiz-edebiyat"><FormattedMessage id="bagimsiz-edebiyat"/></Nav.Link>
+                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/politika"><FormattedMessage id="politics"/></Nav.Link>
+                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/video"><FormattedMessage id="podcast"/></Nav.Link>
+                            <Nav.Link className="nav-element" style={{ color: 'black' }} href="/podcast"><FormattedMessage id="video"/></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
@@ -30,7 +31,7 @@ const Menu = () => {
     )
 }
 
-export default Menu
+export default injectIntl(Menu)
 
     // < Nav.Link as={ NavLink } className = "nav-element" style = {{ color: 'black' }} to = "/" exact > Anasayfa</Nav.Link >
     //                         <Nav.Link as={NavLink} className="nav-element" style={{color:'black'}} to="/kitap">Kitap</Nav.Link>

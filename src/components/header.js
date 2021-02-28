@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import '../styles/layout.css'
 import '../styles/framework.css'
 import Menu from './menu'
+import Language from './language'
 
 const Header = () => {
 
@@ -13,9 +14,10 @@ const Header = () => {
           <div className="fl_right" style={{ paddingRight: '1em' }}>
             <ul>
               <li><Link to="/"><i className="fa fa-lg fa-home" style={{ paddingRight: '1em' }}></i></Link></li>
-              <li><Link to="#">Turkce</Link></li>
+              <li><Language/></li>
+              {/* <li><Link to="#">Turkce</Link></li>
               <li><Link to="#">English</Link></li>
-              <li><Link to="#">Kurdî</Link></li>
+              <li><Link to="#">Kurdî</Link></li> */}
             </ul>
           </div>
         </div>
