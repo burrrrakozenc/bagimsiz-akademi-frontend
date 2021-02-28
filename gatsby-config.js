@@ -56,7 +56,7 @@ module.exports = {
         // Directory with the strings JSON
         path: `${__dirname}/src/intl`,
         // Supported languages
-        languages: [`tr`, `en`],
+        languages: [`tr`, `en`, `kr`],
         // Default site language
         defaultLanguage: `tr`,
         // Redirects to `/pt` in the route `/`

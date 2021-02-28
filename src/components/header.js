@@ -31,7 +31,7 @@ const Header = () => {
         </header>
       </div>
       <div className="wrapper row2">
-        <div id="mainav" className="hoc clear">
+        <div id="mainav">
           <Menu />
         </div>
       </div>

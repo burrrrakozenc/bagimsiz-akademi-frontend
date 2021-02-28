@@ -20,6 +20,7 @@ const Language = () => (
                             margin: 10,
                             textDecoration: `underline`,
                             cursor: `pointer`,
+                            zIndex: '9999'
                         }}
                     >
                         {languageName[language]}

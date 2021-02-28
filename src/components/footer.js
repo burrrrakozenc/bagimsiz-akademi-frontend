@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 const Footer = () => {
     return (
-        <div className="row4">
+        // <div className="row4">
             <footer id="footer">
                 {/* <div className="one_third first" style={{margin: '0 auto'}}> */}
                 {/* <h6 className="heading">Id porttitor enim elit</h6> */}
@@ -21,11 +21,11 @@ const Footer = () => {
                     <li><Link className="faicon-vk" href="#"><i className="fa fa-vk"></i></Link></li>
                 </ul>
             </footer>
-            {/* <div id="copyright" className="hoc clear">
-                <p className="fl_left">Copyright &copy; 2016 - All Rights Reserved - <Link href="#">Domain Name</Link></p>
-                <p className="fl_right">Template by <a target="_blank" rel="noreferrer" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-            </div> */}
-        </div>
+            // {/* <div id="copyright" className="hoc clear">
+            //     <p className="fl_left">Copyright &copy; 2016 - All Rights Reserved - <Link href="#">Domain Name</Link></p>
+            //     <p className="fl_right">Template by <a target="_blank" rel="noreferrer" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+            // </div> */}
+        // </div>
     )
 }
 
