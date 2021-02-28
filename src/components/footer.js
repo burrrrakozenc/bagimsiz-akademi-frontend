@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 const Footer = () => {
     return (
-        <div className="center row5">
+        <div className="row5">
             <footer id="footer" className="hoc clear">
                 {/* <div className="one_third first" style={{margin: '0 auto'}}> */}
                 {/* <h6 className="heading">Id porttitor enim elit</h6> */}
