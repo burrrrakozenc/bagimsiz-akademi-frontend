@@ -1,10 +1,11 @@
-import React, { useState, Component } from "react"
+import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout";
 import '../styles/search.css'
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage, injectIntl, useIntl } from "gatsby-plugin-intl"
 
-const AllArticles = (props) => {
+const AllArticles = props => {
+  const intl = useIntl()
   const { data } = props
   const allPosts = data.allStrapiArticle.edges
 
@@ -49,7 +50,8 @@ const AllArticles = (props) => {
             className="search-input"
             type="text"
             aria-label="Search"
-            placeholder={<FormattedMessage id="author" />}
+            placeholder={intl.formatMessage({ id: "searchHeader" })}
+            // {<FormattedMessage id="author" />}
             onChange={handleInputChange}
           />
           <button type="submit" class="search-button">

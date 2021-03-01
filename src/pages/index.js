@@ -28,7 +28,7 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-          <div className="wrapper row2-after">
+          <div className="wrapper">
             <div className="bgded">
               <div id="pageintro" className="hoc clear">
                 <div className="intro-wrapper">
