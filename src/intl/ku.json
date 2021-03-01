@@ -1,0 +1,19 @@
+{
+    "title": "Bagimsiz Akademi",
+    "description": "Independent Academy",
+    "home": "Xane",
+    "book": "Pirtûk",
+    "makale": "Tişt",
+    "cinema": "Sînema",
+    "zizek": "Zizek Lêkolîn",
+    "bagimsiz-edebiyat": "Akademiya Serbixwe",
+    "politics": "Sîyaset",
+    "podcast": "Podcast",
+    "video": "Vîdyo",
+    "search-header": "Makale aratin...",
+    "author": "Yazar",
+    "notfound": {
+        "header": "Rûpel nehat dîtin",
+        "description": "Hûn hewl didin ku bigihîjin rûpelê nediyarkirî."
+    }
+}

@@ -2,7 +2,7 @@
     "title": "Bagimsiz Akademi",
     "description": "Independent Academy",
     "home": "Home",
-    "book": "Home",
+    "book": "Books",
     "makale": "Article",
     "cinema": "Cinema",
     "zizek": "Zizek Studies",
@@ -10,7 +10,8 @@
     "politics": "Politics",
     "podcast": "Podcast",
     "video": "Video",
-    "author": "@burakozenc",
+    "search-header": "Search for article...",
+    "author": "Author",
     "notfound": {
         "header": "Page not found",
         "description": "You are trying to reach undefined page."

@@ -4,7 +4,7 @@ import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
 const languageName = {
     tr: "Turkce",
     en: "English",
-    kr: "Kurdî",
+    ku: "Kurdî",
 }
 
 const Language = () => (

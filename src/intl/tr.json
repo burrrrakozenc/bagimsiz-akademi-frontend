@@ -10,7 +10,8 @@
     "politics": "Politika",
     "podcast": "Podcast",
     "video": "Video",
-    "author": "@burakozenc",
+    "search-header": "Makale aratin...",
+    "author": "Yazar",
     "notfound": {
         "header": "Sayfa Bulunamadi",
         "description": "Olmayan bir sayfaya gitmeye calisiyorsunuz."

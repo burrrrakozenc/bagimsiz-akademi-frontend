@@ -11,13 +11,12 @@ const Header = () => {
     <body id="top">
       <div className="wrapper row0">
         <div id="topbar" className="hoc clear">
-          <div className="fl_right" style={{ paddingRight: '1em' }}>
+          <div className="fl_right">
+          {/* style={{ paddingRight: '1em', paddingLeft: '1em' }} */}
             <ul>
-              <li><Link to="/"><i className="fa fa-lg fa-home" style={{ paddingRight: '1em' }}></i></Link></li>
+              <li><Link to="/search"><i className="fa fa-lg fa-search"></i></Link></li>
+              <li><Link to="/"><i className="fa fa-lg fa-home"></i></Link></li>
               <li><Language/></li>
-              {/* <li><Link to="#">Turkce</Link></li>
-              <li><Link to="#">English</Link></li>
-              <li><Link to="#">Kurdî</Link></li> */}
             </ul>
           </div>
         </div>

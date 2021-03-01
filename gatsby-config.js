@@ -56,13 +56,23 @@ module.exports = {
         // Directory with the strings JSON
         path: `${__dirname}/src/intl`,
         // Supported languages
-        languages: [`tr`, `en`, `kr`],
+        languages: [`tr`, `en`, `ku`,],
         // Default site language
         defaultLanguage: `tr`,
         // Redirects to `/pt` in the route `/`
         redirect: true,
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-lunr',
+    //   options: {
+    //     languages: [{ name: 'en' }],
+    //     fields: [
+    //       { name: 'title', store: true },
+    //       { name: 'description', store: true },
+    //     ],
+    //   }
+    // }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
